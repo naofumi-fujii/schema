@@ -175,6 +175,7 @@ func fetchColumnTypes(db *sql.DB, name string) ([]*sql.ColumnType, error) {
 	q := fmt.Sprintf(d.queries[columnTypes], (name))
 	escapeIdentQuery := fmt.Sprintf(d.queries[columnTypes], d.escapeIdent(name))
 	rows, err := db.Query(q)
+	fmt.Println(dt)
 	fmt.Println(q)
 	fmt.Println(escapeIdentQuery)
 	if err != nil {
